@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Open_Lab_05._07
 {
@@ -6,7 +8,9 @@ namespace Open_Lab_05._07
     {
         public int[] RemoveSmallest(int[] nums)
         {
-            throw new NotImplementedException();
+            List<int> numbers = nums.OfType<int>().ToList();
+            numbers.Remove(nums.Min());
+            return numbers.ToArray();
         }
     }
 }
